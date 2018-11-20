@@ -18,6 +18,9 @@
 		9243DF4321911CB50007959C /* NewsHogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9243DF4221911CB50007959C /* NewsHogUITests.swift */; };
 		928E2BE221A0E46200875E39 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E2BE121A0E46200875E39 /* APIService.swift */; };
 		928E2BE521A1C4C700875E39 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E2BE421A1C4C700875E39 /* Article.swift */; };
+		928E2BE721A39D5700875E39 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E2BE621A39D5700875E39 /* TabBarViewController.swift */; };
+		928E2BE921A39EE000875E39 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E2BE821A39EE000875E39 /* Source.swift */; };
+		928E2BEC21A3A12A00875E39 /* KeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E2BEB21A3A12A00875E39 /* KeyedDecodingContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		9243DF4421911CB50007959C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		928E2BE121A0E46200875E39 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		928E2BE421A1C4C700875E39 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		928E2BE621A39D5700875E39 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		928E2BE821A39EE000875E39 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		928E2BEB21A3A12A00875E39 /* KeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainer.swift; sourceTree = "<group>"; };
 		9B8F6E3C571839B8B8A82A77 /* Pods-NewsHogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsHogUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsHogUITests/Pods-NewsHogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CBC07A3A08D7D7A5683B1E32 /* Pods-NewsHog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsHog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsHog/Pods-NewsHog.debug.xcconfig"; sourceTree = "<group>"; };
 		DEBEE840B494452EA99736C3 /* libPods-NewsHogUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsHogUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +119,7 @@
 		9243DF2121911CB40007959C /* NewsHog */ = {
 			isa = PBXGroup;
 			children = (
+				928E2BEA21A3A10B00875E39 /* Extensions */,
 				92609A89219295CA0026478B /* API */,
 				92609A8821927B600026478B /* HelperFiles */,
 				92609A8721927B580026478B /* ViewController */,
@@ -143,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				928E2BE421A1C4C700875E39 /* Article.swift */,
+				928E2BE821A39EE000875E39 /* Source.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				9243DF2421911CB40007959C /* ViewController.swift */,
+				928E2BE621A39D5700875E39 /* TabBarViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,6 +182,14 @@
 				928E2BE121A0E46200875E39 /* APIService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		928E2BEA21A3A10B00875E39 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				928E2BEB21A3A12A00875E39 /* KeyedDecodingContainer.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C6CDB60E90EF2C5DC29C9417 /* Frameworks */ = {
@@ -404,7 +421,10 @@
 			files = (
 				928E2BE521A1C4C700875E39 /* Article.swift in Sources */,
 				9243DF2521911CB40007959C /* ViewController.swift in Sources */,
+				928E2BE921A39EE000875E39 /* Source.swift in Sources */,
+				928E2BEC21A3A12A00875E39 /* KeyedDecodingContainer.swift in Sources */,
 				928E2BE221A0E46200875E39 /* APIService.swift in Sources */,
+				928E2BE721A39D5700875E39 /* TabBarViewController.swift in Sources */,
 				9243DF2321911CB40007959C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

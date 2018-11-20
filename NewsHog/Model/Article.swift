@@ -25,6 +25,7 @@ class Article: NSObject, Decodable, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         
+        self.source = aDecoder.decodeObject(forKey: "sourceKey") as! Source
         self.author = aDecoder.decodeObject(forKey: "authorNameKey") as? String
         self.title = aDecoder.decodeObject(forKey: "titleNameKey") as? String
         self.url = aDecoder.decodeObject(forKey: "urlKey") as? String
@@ -33,6 +34,9 @@ class Article: NSObject, Decodable, NSCoding {
         self.content = aDecoder.decodeObject(forKey: "contentKey") as? String
         
     }
+    
+    
+    let source: Source
     let author: String?
     let title: String?
     let url: String?

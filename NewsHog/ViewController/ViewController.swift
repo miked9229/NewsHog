@@ -32,7 +32,9 @@ class ViewController: UIViewController {
     public func goThroughArticles() {
         
         newsArticles.forEach { (art) in
-            print(art.title)
+            print(art.urlToImage)
+            print(art.author)
+            print(art.source)
         }
     }
     
