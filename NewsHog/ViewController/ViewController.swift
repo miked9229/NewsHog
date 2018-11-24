@@ -10,14 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
     var newsArticles = [Article]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
         
         APIService.shared.fetchNews { (articles) in
             
@@ -32,9 +30,8 @@ class ViewController: UIViewController {
     public func goThroughArticles() {
         
         newsArticles.forEach { (art) in
-            print(art.urlToImage)
-            print(art.author)
             print(art.source)
+            print(art.url)
         }
     }
     
