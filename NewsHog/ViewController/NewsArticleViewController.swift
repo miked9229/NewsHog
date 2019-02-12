@@ -9,6 +9,8 @@
 import UIKit
 
 
+//MARK:- NewsArticleViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout
+
 class NewArticlesViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellid = "cellid"
@@ -44,20 +46,18 @@ class NewArticlesViewController: UICollectionViewController, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        
-        let width = (view.frame.width - 3 * 25)
-        print(width)
-        return CGSize(width: width, height: width + 16)
+        let width = (view.frame.width - 3 * 16) / 2
+        return CGSize(width: width, height: width + 46)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
-        return UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 16
+        return 0
     }
     
 
@@ -68,10 +68,11 @@ class NewArticlesViewController: UICollectionViewController, UICollectionViewDel
         
     }
     
+    //MARK:- Helper Methods
+    
     fileprivate func retrieveNewsArticles() {
         
         APIService.shared.fetchNews { (articles) in
-            
             
             self.newsArticles = self.processNewsArticles(articles: articles)
             self.collectionView.reloadData()

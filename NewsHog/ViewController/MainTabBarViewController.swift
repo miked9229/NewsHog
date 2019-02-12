@@ -19,7 +19,6 @@ class MainTabBarViewController: UITabBarController {
         UINavigationBar.appearance().prefersLargeTitles = true
         tabBar.tintColor = .blue
     
-    
         setupViewControllers()
     
     }
@@ -31,13 +30,13 @@ class MainTabBarViewController: UITabBarController {
         let newsArticlesController = NewArticlesViewController(collectionViewLayout: layout)
         
         viewControllers = [
-            generateNavigationController(with: newsArticlesController, title: "", image: nil)
+            generateNavigationController(with: newsArticlesController, title: "News", image: nil)
         
         ]
         
     }
     
-    //MARK:- Helper Functions
+//MARK:- Helper Functions
     
     fileprivate func generateNavigationController(with rootViewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
         
